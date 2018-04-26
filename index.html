@@ -2,17 +2,31 @@
 <html lang=en>
 <head>
   <meta charset=utf-8>
-  <title>vacation spots</title>
+  <title>dinner time</title>
   <link href="./main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <h1>Best vacation spots</h1>
+  <h1>Help me choose between...</h1>
   <div class="inputSection">
     <div class="inputs">
       <input placeholder="something"></input>
     </div>
     <button class="addOption">Add</button>
   </div>
+  <div class="resultSection"></div>
   <button>Go!</button>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+  $(function() {
+  $(".resultSection").hide()
+
+  var addOption = function() {
+    $(".inputs").append("<input></input>")
+  }
+
+  $(".addOption").click(addOption)
+    })
+  </script>
 </body>
 </html>
